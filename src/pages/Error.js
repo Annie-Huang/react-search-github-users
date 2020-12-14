@@ -2,7 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 const Error = () => {
-  return <h2>error page</h2>;
+  return (
+    <Wrapper>
+      <h2>error page</h2>
+    </Wrapper>
+  );
 };
 const Wrapper = styled.section`
   min-height: 100vh;
