@@ -5,5 +5,13 @@ https://github.com/john-smilga/starter-project-react-github-search-users
 https://github.com/john-smilga/react-search-github-users
 
 https://github.com/Annie-Huang/react-search-github-users
+
+https://react-icons.github.io/react-icons/
+https://reactrouter.com/web/guides/quick-start
+
 ================================================================
 
+
+http://localhost:3000/
+http://localhost:3000/login
+http://localhost:3000/hello     <<< Error page.
