@@ -13,7 +13,7 @@ https://reactrouter.com/web/guides/quick-start
 
 
 http://localhost:3000/
-http://localhost:3000/login
+http://localhost:3000/login     <<< Login page
 http://localhost:3000/hello     <<< Error page.
 
 <Switch> renders the first child <Route> that matches
