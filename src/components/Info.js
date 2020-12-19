@@ -17,7 +17,14 @@ const UserInfo = () => {
     {id: 4, icon: <GoGist className='icon' />, label: 'gists',  value: public_repos, color: 'yellow'},
   ]
 
-  return <h2>user info component</h2>;
+  // <Wrapper> is the styled-component
+  return <section className="section">
+    <Wrapper className="section-center">
+      {items.map(item => {
+        return <p>item</p>
+      })}
+    </Wrapper>
+  </section>;
 };
 
 const Wrapper = styled.section`
