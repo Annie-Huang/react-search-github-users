@@ -3,8 +3,17 @@ import { GithubContext } from '../context/context';
 import styled from 'styled-components';
 import { MdBusiness, MdLocationOn, MdLink } from 'react-icons/md';
 const Card = () => {
-  const {githubUser} = React.useContext(GithubContext);
-  const {avatar_url, html_url, name, company, blog, bio, location, twitter_username} = githubUser;
+  const { githubUser } = React.useContext(GithubContext);
+  const {
+    avatar_url,
+    html_url,
+    name,
+    company,
+    blog,
+    bio,
+    location,
+    twitter_username,
+  } = githubUser;
 
   return (
     <Wrapper>
@@ -16,15 +25,18 @@ const Card = () => {
         </div>
         <a href={html_url}>follow</a>
       </header>
-      <p className="bio">{bio}</p>
-      <div className="links">
+      <p className='bio'>{bio}</p>
+      <div className='links'>
         <p>
           <MdBusiness></MdBusiness> {company}
         </p>
         <p>
           <MdLocationOn></MdLocationOn> {location || 'earth'}
         </p>
-        <a href={`https://${blog}`}><MdLink></MdLink>{blog}</a>
+        <a href={`https://${blog}`}>
+          <MdLink></MdLink>
+          {blog}
+        </a>
       </div>
     </Wrapper>
   );
