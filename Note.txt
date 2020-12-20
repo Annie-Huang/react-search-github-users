@@ -12,6 +12,8 @@ https://reactrouter.com/web/guides/quick-start
 https://api.github.com/users/john-smilga
 https://api.github.com/users/Annie-Huang
 https://www.fusioncharts.com/
+https://www.fusioncharts.com/react-charts?framework=react
+https://www.fusioncharts.com/dev/getting-started/react/your-first-chart-using-react   << Render the chart section
 ================================================================
 
 
