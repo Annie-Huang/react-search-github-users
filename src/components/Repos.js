@@ -6,7 +6,13 @@ const Repos = () => {
   const { repos } = React.useContext(GithubContext);
   console.log(repos);
 
-  return <ExampleChart />;
+  return (
+    <section className='section'>
+      <Wrapper className='section-center'>
+        <ExampleChart />
+      </Wrapper>
+    </section>
+  );
 };
 
 const Wrapper = styled.div`
