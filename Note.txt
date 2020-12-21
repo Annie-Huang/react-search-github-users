@@ -14,6 +14,8 @@ https://api.github.com/users/Annie-Huang
 https://www.fusioncharts.com/
 https://www.fusioncharts.com/react-charts?framework=react
 https://www.fusioncharts.com/dev/getting-started/react/your-first-chart-using-react   << Render the chart section
+https://www.fusioncharts.com/dev/chart-guide/list-of-charts
+https://www.fusioncharts.com/dev/chart-attributes/bar3d   << Chart Axis Configuration Attributes
 ================================================================
 
 
