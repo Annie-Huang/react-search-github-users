@@ -21,10 +21,12 @@ const Repos = () => {
     },
   ];
 
+  // Click on the Pie can remove out that pie portion.
   return (
     <section className='section'>
       <Wrapper className='section-center'>
         {/* <ExampleChart data={chartData} /> */}
+        <Pie3D data={chartData} />
       </Wrapper>
     </section>
   );

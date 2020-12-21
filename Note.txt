@@ -16,6 +16,9 @@ https://www.fusioncharts.com/react-charts?framework=react
 https://www.fusioncharts.com/dev/getting-started/react/your-first-chart-using-react   << Render the chart section
 https://www.fusioncharts.com/dev/chart-guide/list-of-charts
 https://www.fusioncharts.com/dev/chart-attributes/bar3d   << Chart Axis Configuration Attributes
+https://www.fusioncharts.com/dev/chart-attributes/pie3d
+https://www.fusioncharts.com/dev/chart-guide/standard-charts/pie-and-doughnut-charts#customize-pie-radius
+https://www.fusioncharts.com/dev/fusioncharts-aspnet-visualization/api-reference-net/visualization-api-net#palette-colors
 ================================================================
 
 
