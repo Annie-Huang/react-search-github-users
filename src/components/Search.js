@@ -3,6 +3,13 @@ import styled from 'styled-components';
 import { MdSearch } from 'react-icons/md';
 import { GithubContext } from '../context/context';
 const Search = () => {
+  const [user, setUser] = React.useState('');
+
+  // get things from global context
+  const handleSubmit = (e) => {
+    console.log(user);
+  };
+
   return <h2>search component</h2>;
 };
 
