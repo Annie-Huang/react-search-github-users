@@ -67,6 +67,14 @@ const Repos = () => {
     .slice(0, 5);
   console.log(mostPopular); // [{label: "CSS", value: 412, stars: 412}, {label: "JavaScript", value: 376, stars: 376}, {label: "HTML", value: 34, stars: 34}]
 
+  // stars, forks
+  let {stars, forks} = repos.reduce((total, item) => {
+    return total;
+  }, {
+    stars: {},
+    forks: {},
+  })
+
   const chartData = [
     {
       label: 'HTML',
