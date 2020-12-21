@@ -24,7 +24,10 @@ const Repos = () => {
       total[language] = { label: language, value: 1 };
     } else {
       // total[language]++;
-      total[language] = { ...total[language], value: total[language].value++ };
+      total[language] = {
+        ...total[language],
+        value: total[language].value + 1,
+      };
     }
     // console.log(total); // e.g. {JavaScript: 45, CSS: 38, HTML: 14}
 
@@ -32,9 +35,9 @@ const Repos = () => {
     /* 
     change it into this format:
     {
-      CSS: {label: "CSS", value: 1},
-      HTML: {label: "HTML", value: 1},
-      JavaScript: {label: "JavaScript", value: 1},
+      CSS: {label: "CSS", value: 38},
+      HTML: {label: "HTML", value: 14},
+      JavaScript: {label: "JavaScript", value: 45},
     }
     */
 
