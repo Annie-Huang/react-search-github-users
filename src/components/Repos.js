@@ -4,7 +4,17 @@ import { GithubContext } from '../context/context';
 import { ExampleChart, Pie3D, Column3D, Bar3D, Doughnut2D } from './Charts';
 const Repos = () => {
   const { repos } = React.useContext(GithubContext);
-  console.log(repos);
+  // console.log(repos);
+
+  /*
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  array1.reduce(reducer, initialValue); 
+  */
+  let Languages = repos.reduce((total, item) => {
+    console.log(item);
+    return total;
+  }, {});
 
   const chartData = [
     {
