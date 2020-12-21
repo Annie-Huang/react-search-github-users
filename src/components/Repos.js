@@ -14,7 +14,7 @@ const Repos = () => {
   const languages = repos.reduce((total, item) => {
     // console.log(item);
     const { language, stargazers_count } = item;
-    console.log(language);
+    // console.log(language);
 
     if (!language) return total; // Need to filter of language === null;
 
@@ -58,22 +58,39 @@ const Repos = () => {
     .sort((a, b) => b.value - a.value)
     .slice(0, 5);
   // console.log(languages); // sort by descending order and get the first 5 items:  [{label: "JavaScript", value: 45}, {label: "CSS", value: 38}, {label: "HTML", value: 14}]
-  console.log(mostUsed);
+  // console.log(mostUsed);
 
   // most stars per language
   const mostPopular = Object.values(languages)
     .sort((a, b) => b.stars - a.stars)
     .map((item) => ({ ...item, value: item.stars })) // copy values in property stars into property value
     .slice(0, 5);
-  console.log(mostPopular); // [{label: "CSS", value: 412, stars: 412}, {label: "JavaScript", value: 376, stars: 376}, {label: "HTML", value: 34, stars: 34}]
+  // console.log(mostPopular); // [{label: "CSS", value: 412, stars: 412}, {label: "JavaScript", value: 376, stars: 376}, {label: "HTML", value: 34, stars: 34}]
 
   // stars, forks
-  let {stars, forks} = repos.reduce((total, item) => {
-    return total;
-  }, {
-    stars: {},
-    forks: {},
-  })
+  let { stars, forks } = repos.reduce(
+    (total, item) => {
+      const { stargazers_count, name, forks } = item;
+
+      // I think this is the wrong setup, what happens if you got two repo that has the same number of stars count, the later one will override the previous one.
+      total.stars[stargazers_count] = { label: name, value: stargazers_count };
+
+      return total;
+    },
+    {
+      stars: {},
+      forks: {},
+    }
+  );
+  console.log(stars);
+  /* The format will be: {
+    ...
+    59: {label: "js-cart-setup", value: 59}
+    79: {label: "react-phone-e-commerce-project", value: 79}
+    127: {label: "react-beach-resort-project", value: 127}
+    206: {label: "javascript-basic-projects", value: 206}
+  }
+  */
 
   const chartData = [
     {
