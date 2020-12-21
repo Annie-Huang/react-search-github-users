@@ -73,7 +73,9 @@ const Repos = () => {
       const { stargazers_count, name, forks } = item;
 
       // I don't think this is right, what happens if you got two repo that has the same number of stars count, the later one will override the previous one.
+      // OK, good to know the Author is aware of this (2:47:46), and agreed with him that most likely it doesn't duplicate, specially on the large number side.
       total.stars[stargazers_count] = { label: name, value: stargazers_count };
+      total.forks[forks] = { label: name, value: forks };
 
       return total;
     },
@@ -91,8 +93,10 @@ const Repos = () => {
     206: {label: "javascript-basic-projects", value: 206}
   }
   */
+  console.log(forks);
 
   stars = Object.values(stars).slice(-5).reverse(); // convert into array, get the last 5 values and reverse the order.
+  forks = Object.values(forks).slice(-5).reverse();
 
   const chartData = [
     {
@@ -117,7 +121,7 @@ const Repos = () => {
         <Pie3D data={mostUsed} />
         <Column3D data={stars} />
         <Doughnut2D data={mostPopular} />
-        <Bar3D data={chartData} />
+        <Bar3D data={forks} />
         <div></div>
       </Wrapper>
     </section>
