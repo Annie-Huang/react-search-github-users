@@ -98,21 +98,6 @@ const Repos = () => {
   stars = Object.values(stars).slice(-5).reverse(); // convert into array, get the last 5 values and reverse the order.
   forks = Object.values(forks).slice(-5).reverse();
 
-  const chartData = [
-    {
-      label: 'HTML',
-      value: '13',
-    },
-    {
-      label: 'CSS',
-      value: '160',
-    },
-    {
-      label: 'Javascript',
-      value: '80',
-    },
-  ];
-
   // Click on the Pie or Doughnut can remove out that pie portion.
   return (
     <section className='section'>
