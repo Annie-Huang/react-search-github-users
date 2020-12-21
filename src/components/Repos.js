@@ -44,8 +44,14 @@ const Repos = () => {
     return total;
   }, {});
 
+  /*
   languages = Object.values(languages);
   console.log(languages); // convert it back into array: [{label: "JavaScript", value: 45}, {label: "CSS", value: 38}, {label: "HTML", value: 14]
+ */
+  languages = Object.values(languages)
+    .sort((a, b) => b.value - a.value)
+    .slice(0, 5);
+  console.log(languages); // sort by descending order and get the first 5 items:  [{label: "JavaScript", value: 45}, {label: "CSS", value: 38}, {label: "HTML", value: 14}]
 
   const chartData = [
     {
