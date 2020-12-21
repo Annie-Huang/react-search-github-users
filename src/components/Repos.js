@@ -72,7 +72,7 @@ const Repos = () => {
     (total, item) => {
       const { stargazers_count, name, forks } = item;
 
-      // I think this is the wrong setup, what happens if you got two repo that has the same number of stars count, the later one will override the previous one.
+      // I don't think this is right, what happens if you got two repo that has the same number of stars count, the later one will override the previous one.
       total.stars[stargazers_count] = { label: name, value: stargazers_count };
 
       return total;
@@ -115,7 +115,7 @@ const Repos = () => {
       <Wrapper className='section-center'>
         {/* <ExampleChart data={chartData} /> */}
         <Pie3D data={mostUsed} />
-        <Column3D data={chartData} />
+        <Column3D data={stars} />
         <Doughnut2D data={mostPopular} />
         <Bar3D data={chartData} />
         <div></div>
