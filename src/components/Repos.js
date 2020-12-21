@@ -13,7 +13,7 @@ const Repos = () => {
   */
   let languages = repos.reduce((total, item) => {
     // console.log(item);
-    const { language } = item;
+    const { language, stargazers_count } = item;
     console.log(language);
 
     if (!language) return total; // Need to filter of language === null;
@@ -21,12 +21,13 @@ const Repos = () => {
     // use object so it will have duplicate key.
     if (!total[language]) {
       // total[language] = 1;
-      total[language] = { label: language, value: 1 };
+      total[language] = { label: language, value: 1, stars: stargazers_count };
     } else {
       // total[language]++;
       total[language] = {
         ...total[language],
         value: total[language].value + 1,
+        stars: total[language].stars + stargazers_count,
       };
     }
     // console.log(total); // e.g. {JavaScript: 45, CSS: 38, HTML: 14}
@@ -38,6 +39,11 @@ const Repos = () => {
       CSS: {label: "CSS", value: 38},
       HTML: {label: "HTML", value: 14},
       JavaScript: {label: "JavaScript", value: 45},
+    }
+    {
+      CSS: {label: "CSS", value: 38, stars: 412},
+      HTML: {label: "HTML", value: 14, stars: 34},
+      JavaScript: {label: "JavaScript", value: 45, stars: 376},
     }
     */
 
