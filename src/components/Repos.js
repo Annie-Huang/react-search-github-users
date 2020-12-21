@@ -11,7 +11,7 @@ const Repos = () => {
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
   array1.reduce(reducer, initialValue); 
   */
-  let Languages = repos.reduce((total, item) => {
+  let languages = repos.reduce((total, item) => {
     // console.log(item);
     const { language } = item;
     console.log(language);
@@ -43,6 +43,9 @@ const Repos = () => {
 
     return total;
   }, {});
+
+  languages = Object.values(languages);
+  console.log(languages); // convert it back into array: [{label: "JavaScript", value: 45}, {label: "CSS", value: 38}, {label: "HTML", value: 14]
 
   const chartData = [
     {
