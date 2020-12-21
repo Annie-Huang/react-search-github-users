@@ -60,6 +60,13 @@ const Repos = () => {
   // console.log(languages); // sort by descending order and get the first 5 items:  [{label: "JavaScript", value: 45}, {label: "CSS", value: 38}, {label: "HTML", value: 14}]
   console.log(mostUsed);
 
+  // most stars per language
+  const mostPopular = Object.values(languages)
+    .sort((a, b) => b.stars - a.stars)
+    .map((item) => ({ ...item, value: item.stars })) // copy values in property stars into property value
+    .slice(0, 5);
+  console.log(mostPopular); // [{label: "CSS", value: 412, stars: 412}, {label: "JavaScript", value: 376, stars: 376}, {label: "HTML", value: 34, stars: 34}]
+
   const chartData = [
     {
       label: 'HTML',
