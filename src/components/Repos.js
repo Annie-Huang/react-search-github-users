@@ -12,7 +12,20 @@ const Repos = () => {
   array1.reduce(reducer, initialValue); 
   */
   let Languages = repos.reduce((total, item) => {
-    console.log(item);
+    // console.log(item);
+    const { language } = item;
+    console.log(language);
+
+    if (!language) return total; // Need to filter of language === null;
+
+    // use object so it will have duplicate key.
+    if (!total[language]) {
+      total[language] = 1;
+    } else {
+      total[language]++;
+    }
+    // console.log(total); // e.g. {JavaScript: 45, CSS: 38, HTML: 14}
+
     return total;
   }, {});
 
