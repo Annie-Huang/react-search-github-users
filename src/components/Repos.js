@@ -92,6 +92,8 @@ const Repos = () => {
   }
   */
 
+  stars = Object.values(stars).slice(-5).reverse(); // convert into array, get the last 5 values and reverse the order.
+
   const chartData = [
     {
       label: 'HTML',
