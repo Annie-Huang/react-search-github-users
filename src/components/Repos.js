@@ -53,12 +53,30 @@ const Repos = () => {
     .slice(0, 5);
   console.log(languages); // sort by descending order and get the first 5 items:  [{label: "JavaScript", value: 45}, {label: "CSS", value: 38}, {label: "HTML", value: 14}]
 
+  const chartData = [
+    {
+      label: 'HTML',
+      value: '13',
+    },
+    {
+      label: 'CSS',
+      value: '160',
+    },
+    {
+      label: 'Javascript',
+      value: '80',
+    },
+  ];
+
   // Click on the Pie can remove out that pie portion.
   return (
     <section className='section'>
       <Wrapper className='section-center'>
         {/* <ExampleChart data={chartData} /> */}
         <Pie3D data={languages} />
+        <div></div>
+        <Doughnut2D data={chartData} />
+        <div></div>
       </Wrapper>
     </section>
   );
