@@ -21,6 +21,7 @@ https://www.fusioncharts.com/dev/chart-guide/standard-charts/pie-and-doughnut-ch
 https://www.fusioncharts.com/dev/fusioncharts-aspnet-visualization/api-reference-net/visualization-api-net#palette-colors
 https://www.fusioncharts.com/dev/chart-attributes/doughnut2d
 https://www.fusioncharts.com/dev/themes/introduction-to-themes
+https://www.fusioncharts.com/dev/chart-attributes/column3d
 
 ================================================================
 
