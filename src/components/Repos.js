@@ -11,7 +11,7 @@ const Repos = () => {
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
   array1.reduce(reducer, initialValue); 
   */
-  let languages = repos.reduce((total, item) => {
+  const languages = repos.reduce((total, item) => {
     // console.log(item);
     const { language, stargazers_count } = item;
     console.log(language);
@@ -54,10 +54,11 @@ const Repos = () => {
   languages = Object.values(languages);
   console.log(languages); // convert it back into array: [{label: "JavaScript", value: 45}, {label: "CSS", value: 38}, {label: "HTML", value: 14]
  */
-  languages = Object.values(languages)
+  const mostUsed = Object.values(languages)
     .sort((a, b) => b.value - a.value)
     .slice(0, 5);
-  console.log(languages); // sort by descending order and get the first 5 items:  [{label: "JavaScript", value: 45}, {label: "CSS", value: 38}, {label: "HTML", value: 14}]
+  // console.log(languages); // sort by descending order and get the first 5 items:  [{label: "JavaScript", value: 45}, {label: "CSS", value: 38}, {label: "HTML", value: 14}]
+  console.log(mostUsed);
 
   const chartData = [
     {
@@ -79,7 +80,7 @@ const Repos = () => {
     <section className='section'>
       <Wrapper className='section-center'>
         {/* <ExampleChart data={chartData} /> */}
-        <Pie3D data={languages} />
+        <Pie3D data={mostUsed} />
         <div></div>
         <Doughnut2D data={chartData} />
         <div></div>
