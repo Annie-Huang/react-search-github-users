@@ -4,9 +4,9 @@ import { MdSearch } from 'react-icons/md';
 import { GithubContext } from '../context/context';
 const Search = () => {
   const [user, setUser] = React.useState('');
-  const { requests, error } = React.useContext(GithubContext);
+  const { requests, error, searchGithubUser } = React.useContext(GithubContext);
   // console.log(requests);
-  console.log(error);
+  // console.log(error);
 
   // get things from global context
   const handleSubmit = (e) => {
@@ -14,6 +14,8 @@ const Search = () => {
     // console.log(user);
 
     if (user) {
+      searchGithubUser(user);
+
       // setUser(''); // Decide not to do that because user may enter one letter incorrectly.
     }
   };
@@ -21,7 +23,11 @@ const Search = () => {
   return (
     <section className='section'>
       <Wrapper className='section-center'>
-        {error.show && <ErrorWrapper><p>{error.msg}</p></ErrorWrapper>}
+        {error.show && (
+          <ErrorWrapper>
+            <p>{error.msg}</p>
+          </ErrorWrapper>
+        )}
         <form onSubmit={handleSubmit}>
           <div className='form-control'>
             <MdSearch />
