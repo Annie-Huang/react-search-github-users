@@ -27,6 +27,11 @@ const GithubProvider = ({ children }) => {
         let {
           rate: { remaining },
         } = data;
+
+        setRequests(remaining);
+        if (remaining === 0) {
+          // throw an error
+        }
       })
       .catch((err) => console.log(err));
   };
@@ -35,7 +40,7 @@ const GithubProvider = ({ children }) => {
   useEffect(checkRequests, []);
 
   return (
-    <GithubContext.Provider value={{ githubUser, repos, followers }}>
+    <GithubContext.Provider value={{ githubUser, repos, followers, requests }}>
       {children}
     </GithubContext.Provider>
   );
