@@ -17,7 +17,7 @@ const GithubProvider = ({ children }) => {
 
   // request loading
   const [requests, setRequests] = useState(0);
-  const [loading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   // error
   const [error, setError] = useState({ show: false, msg: '' });
@@ -25,6 +25,7 @@ const GithubProvider = ({ children }) => {
   const searchGithubUser = async (user) => {
     console.log(user);
     toggleError(); //reset error because making api call
+
     // setLoading(true);
     const response = await axios(`${rootUrl}/users/${user}`).catch((err) =>
       console.log(err)
@@ -71,6 +72,7 @@ const GithubProvider = ({ children }) => {
         requests,
         error,
         searchGithubUser,
+        isLoading,
       }}
     >
       {children}
