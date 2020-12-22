@@ -35,9 +35,10 @@ const GithubProvider = ({ children }) => {
     if (response) {
       setGithubUser(response.data);
       const { login, followers_url } = response.data;
-
+      /*
       // repos
       // https://api.github.com/users/john-smilga/repos?per_page=100
+      // you can also do it with axios(`${repos_url}?per_page=100`), repos_url can be retrieve from response.data
       axios(`${rootUrl}/users/${login}/repos?per_page=100`).then((response) =>
         // console.log(response)
         setRepos(response.data)
@@ -49,6 +50,26 @@ const GithubProvider = ({ children }) => {
         // console.log(response)
         setFollowers(response.data)
       );
+*/
+      await Promise.allSettled([
+        axios(`${rootUrl}/users/${login}/repos?per_page=100`),
+        axios(`${followers_url}?per_page=100`),
+      ]).then((results) => {
+        console.log(results);
+
+        const [repos, followers] = results;
+        const status = 'fulfilled';
+
+        // if something wrong with the api call, e.g. request url is incorrect, it will return 'rejected' for that specific call.
+        // but it will still return array of 2. So you have to check the status of each one before you set the value.
+        if (repos.status === status) {
+          setRepos(results[0].value.data);
+        }
+        if (followers.status === status) {
+          setFollowers(results[1].value.data);
+        }
+      });
+      // It will wait for all three calls, users, repos and followers call to comeback before setting isLoading = false again.
     } else {
       toggleError(true, 'there is no user with that username');
     }
