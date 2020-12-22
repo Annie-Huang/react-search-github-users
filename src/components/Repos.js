@@ -84,7 +84,7 @@ const Repos = () => {
       forks: {},
     }
   );
-  console.log(stars);
+  // console.log(stars);
   /* The format will be: {
     ...
     59: {label: "js-cart-setup", value: 59}
@@ -93,7 +93,7 @@ const Repos = () => {
     206: {label: "javascript-basic-projects", value: 206}
   }
   */
-  console.log(forks);
+  // console.log(forks);
 
   stars = Object.values(stars).slice(-5).reverse(); // convert into array, get the last 5 values and reverse the order.
   forks = Object.values(forks).slice(-5).reverse();
