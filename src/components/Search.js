@@ -8,7 +8,11 @@ const Search = () => {
   // get things from global context
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(user);
+    // console.log(user);
+
+    if (user) {
+      // setUser(''); // Decide not to do that because user may enter one letter incorrectly.
+    }
   };
 
   return (

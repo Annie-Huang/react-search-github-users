@@ -11,6 +11,10 @@ https://reactrouter.com/web/guides/quick-start
 
 https://api.github.com/users/john-smilga
 https://api.github.com/users/Annie-Huang
+https://api.github.com/users/john-smilga/repos?per_page=100
+https://api.github.com/users/john-smilga/followers
+https://api.github.com/rate_limit   << how many times remaining you can search on the result within 1 hr time frame.
+
 https://www.fusioncharts.com/
 https://www.fusioncharts.com/react-charts?framework=react
 https://www.fusioncharts.com/dev/getting-started/react/your-first-chart-using-react   << Render the chart section
@@ -23,6 +27,7 @@ https://www.fusioncharts.com/dev/chart-attributes/doughnut2d
 https://www.fusioncharts.com/dev/themes/introduction-to-themes
 https://www.fusioncharts.com/dev/chart-attributes/column3d
 https://www.fusioncharts.com/dev/chart-attributes/bar3d
+
 ================================================================
 
 
