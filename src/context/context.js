@@ -24,7 +24,7 @@ const GithubProvider = ({ children }) => {
 
   const searchGithubUser = async (user) => {
     console.log(user);
-    // toggleError;
+    toggleError(); //reset error because making api call
     // setLoading(true);
     const response = await axios(`${rootUrl}/users/${user}`).catch((err) =>
       console.log(err)
