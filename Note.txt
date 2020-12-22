@@ -38,6 +38,15 @@ http://localhost:3000/hello     <<< Error page.
 <Switch> renders the first child <Route> that matches
 
 
+Short cut of useEffect:
+################################################
+  useEffect(() => {
+    console.log('hey, app loaded');
+    checkRequests();
+  }, []);
+
+is the same as 
+  useEffect(checkRequests, []);		<<< Notice there is NO () to the checkRequests
 
 
 

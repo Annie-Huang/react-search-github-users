@@ -27,10 +27,7 @@ const GithubProvider = ({ children }) => {
   };
 
   // error
-  useEffect(() => {
-    console.log('hey, app loaded');
-    checkRequests();
-  }, []);
+  useEffect(checkRequests, []);
 
   return (
     <GithubContext.Provider value={{ githubUser, repos, followers }}>
