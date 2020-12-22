@@ -31,6 +31,7 @@ const GithubProvider = ({ children }) => {
           rate: { remaining },
         } = data;
 
+        remaining = 0;
         setRequests(remaining);
         if (remaining === 0) {
           toggleError(true, 'sorry, you have exceeded your hourly rate limit!');
@@ -40,14 +41,16 @@ const GithubProvider = ({ children }) => {
   };
 
   function toggleError(show, msg) {
-    setError({show, msg});
+    setError({ show, msg });
   }
 
   // error
   useEffect(checkRequests, []);
 
   return (
-    <GithubContext.Provider value={{ githubUser, repos, followers, requests, error }}>
+    <GithubContext.Provider
+      value={{ githubUser, repos, followers, requests, error }}
+    >
       {children}
     </GithubContext.Provider>
   );
