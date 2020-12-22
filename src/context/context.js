@@ -18,12 +18,18 @@ const GithubProvider = ({ children }) => {
   // request loading
   const [requests, setRequests] = useState(0);
   const [loading, setIsLoading] = useState(false);
-  
+
   // check rate
+  const checkRequests = () => {
+    axios(`${rootUrl}/rate_limit`)
+      .then((data) => {})
+      .catch((err) => console.log(err));
+  };
 
   // error
   useEffect(() => {
     console.log('hey, app loaded');
+    checkRequests();
   }, []);
 
   return (
