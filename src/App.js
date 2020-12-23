@@ -6,9 +6,12 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path='/' exact={true}>
+        {/* <Route path='/' exact={true}>
           <Dashboard></Dashboard>
-        </Route>
+        </Route> */}
+        <PrivateRoute path='/' exact={true}>
+          <Dashboard></Dashboard>
+        </PrivateRoute>
         <Route path='/login'>
           <Login></Login>
         </Route>
