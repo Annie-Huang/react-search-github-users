@@ -28,6 +28,8 @@ https://www.fusioncharts.com/dev/themes/introduction-to-themes
 https://www.fusioncharts.com/dev/chart-attributes/column3d
 https://www.fusioncharts.com/dev/chart-attributes/bar3d
 
+https://auth0.com/
+https://auth0.com/docs/libraries/auth0-react
 ================================================================
 
 
@@ -58,7 +60,8 @@ marcysutton
 kyleAMathews
 
 
-
+Auth0 info is in C:\react\Auth0.docx
+README.md has the steps of how to set this up.
 
 
 
