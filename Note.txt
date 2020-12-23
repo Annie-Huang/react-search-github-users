@@ -30,6 +30,7 @@ https://www.fusioncharts.com/dev/chart-attributes/bar3d
 
 https://auth0.com/
 https://auth0.com/docs/libraries/auth0-react
+https://auth0.com/docs/libraries/auth0-react#isloading-and-error
 ================================================================
 
 
