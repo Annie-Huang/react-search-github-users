@@ -10,10 +10,14 @@ const Navbar = () => {
     user,
     isLoading,
   } = useAuth0();
+  console.log({isAuthenticated, user, isLoading });
 
   return (
     <Wrapper>
       <button onClick={loginWithRedirect}>login</button>
+      <button onClick={() => logout({ returnTo: window.location.origin })}>
+        logout
+      </button>
     </Wrapper>
   );
 };
