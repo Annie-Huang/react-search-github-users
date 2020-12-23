@@ -12,7 +12,7 @@ const Navbar = () => {
   } = useAuth0();
   const isUser = isAuthenticated && user;
 
-  console.log({ isAuthenticated, user, isLoading });
+  console.log('in Navbar', { isAuthenticated, user, isLoading });
 
   return (
     <Wrapper>

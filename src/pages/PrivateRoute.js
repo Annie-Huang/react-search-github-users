@@ -6,6 +6,8 @@ const PrivateRoute = ({ children, ...rest }) => {
   const { isAuthenticated, user } = useAuth0();
   const isUser = isAuthenticated && user;
 
+  console.log('in PrivateRoute', { isAuthenticated, user });
+
   return (
     <Route
       {...rest}
